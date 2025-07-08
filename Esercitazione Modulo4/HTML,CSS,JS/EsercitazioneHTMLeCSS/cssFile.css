@@ -1,0 +1,300 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Corpo ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* ===== Intestazione con ID ===== */
+#Su {
+  color: blue;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* ===== Classi personalizzate ===== */
+.box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.evi {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.errore {
+  color: red;
+  font-style: italic;
+}
+
+/* ===== Selettore tramite attributi ===== */
+blockquote [cite] {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* ===== Link ===== */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* ===== Pseudo classe ===== */
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Pseudo elementi ===== */
+p::first-line {
+  font-size: 120%;
+}
+
+.boxs::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color:#28a745;
+    border: 1px solid;
+}
+
+/* ===== Descendant, child e siblings ===== */
+.desc p {
+  color:#007bff;
+}
+
+.child > p {
+  color:#007bff;
+}
+
+h1 + p{
+    background-color:#28a745;
+}
+
+/* ===== Display ===== */
+#ul {
+  display: flex;
+}
+
+/* ===== Immagini con dispaly ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Oveflow ===== */
+#pi {
+  overflow: scroll;
+}
+
+/* ===== Object fit ===== */
+#ob {
+  object-fit: contain;
+}
+
+/* ===== Form ===== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ===== Pulsanti nel form ===== */
+button, input[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* ===== Stile per le tabelle ===== */
+#t {
+  table-layout: fixed;
+  width: 80%;
+  min-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+
+th,
+td {
+  vertical-align: top;
+  padding: 0.3em;
+}
+
+tr :nth-child(2),
+tr :nth-child(3) {
+  text-align: right;
+  width: 15%;
+}
+
+tr :nth-child(1),
+tr :nth-child(4) {
+  text-align: left;
+  width: 35%;
+}
+
+tfoot tr :nth-child(1) {
+  text-align: right;
+}
+
+tfoot tr :nth-child(2) {
+  text-align: left;
+}
+
+tfoot {
+  border-top: 1px solid #999;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+caption {
+  padding: 1em;
+  font-style: italic;
+  caption-side: bottom;
+  letter-spacing: 1px;
+}
+/* ===== Font e testo ===== */
+#uno {
+  font-size: 5rem;
+  text-transform: capitalize;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
+}
+
+#due {
+  color: red;
+  font-family: Arial;
+  line-height: 1.6;
+}
+
+#tre {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+#tre::first-line {
+  letter-spacing: 4px;
+  word-spacing: 4px;
+}
+
+/* ===== flex ===== */
+.flex {
+  display: flex;
+}
+
+.flex>div {
+  padding: 20px;
+  margin: 5px;
+  background-color: salmon;
+}
+
+/* ===== grid ===== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
+}
+
+.grid>div {
+  padding: 20px;
+  margin: 5px;
+  background-color: cadetblue;
+}
+
+.box3 {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+.box4 {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* ===== Float ===== */
+
+.float {
+  float: right;
+}
+
+/* ===== Positioning ===== */
+
+#Pos {
+  position: static;
+}
+
+#Pes {
+  position: relative;
+}
+
+#Pas {
+  position: absolute;
+}
+
+/* ===== Responsive ===== */
+#Pas {
+  font-size: calc(1.4em + 3vw);
+}
+
+@media (max-width: 768px) {
+  #intestazione {
+    font-size: 20px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+}
+
+@media screen and (width: 600px) {
+  body {
+    color: red;
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    color: rebeccapurple;
+  }
+}
+
+@media screen and (hover: hover) {
+  body:hover {
+    color: white;
+    background: black;
+  }
+}

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Francesco Iantosca">
+    <meta name="description" content="Esercitazione HTML">
+
+    <title>Pagina HTML</title>
+
+    <link rel="shortcut icon" href="immagini/favicon.ico" type="immage/x-icon">
+
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:description" content="The Mozilla Developer Network (MDN) provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+    <meta property="og:title" content="Mozilla Developer Network">
+
+    <link rel="stylesheet" href="cssFile.css">
+    <script src="jsFile.js"></script>
+
+    <style>
+        .classe{
+            color: palegreen; /* Colore del testo */
+            font-size: 20px; /* Dimensione del testo */
+        }
+    </style>
+    
+</head>
+<body>
+
+<div class="box">
+    <!--  Elementi  -->
+    <h1 id="Su"> Questo è un elemento </h1>
+
+    <!--  Elementi annidati  -->
+    <p class="errore"> Questo è un elemento 
+        <strong> Questo è un altro elemento</strong> 
+    </p>
+
+    <!--  Elementi vuoti  -->
+    <img src="immagini/a.png">
+
+    <!--  Attributi degli elementi  -->
+    <img src="immagini/a.png"   
+        alt="Una descrizione alternativa"
+        width="300"                      
+        height="200"                     
+        title="Testo al passaggio del mouse" 
+        loading="lazy"                  
+        style="border: 2px solid black;"  
+        id="immagine-principale"         
+        class="immagine-evidenziata"      
+    >
+
+    <!--  Caratteri speciali  -->
+    <p class="evi">
+        Simbolo dell'euro: &euro; <br>
+        Simbolo del copyright: &copy; <br>
+        Simbolo della registrazione: &reg; <br>
+        Ampersand: &amp; <br>
+        Maggiore: &gt; &nbsp;&nbsp; Minore: &lt; <br>
+        Apice singolo: &apos; &nbsp;&nbsp; Apice doppio: &quot;
+    </p><br>
+
+    <!--  Intestazioni  -->
+    <h1> Questo è un titolo </h1>
+    <h2> Questo è un sottotitolo </h2>
+    <p> Questo è un paragrafo</p><br>
+
+    <!--  Liste puntate e numerate  -->
+      <ul>
+        <li>Elemento</li>
+        <li>Elemento</li>
+      </ul><br>
+
+      <ol>
+        <li>Elemento Numerato</li>
+        <li>Elemento Numerato</li>
+      </ol><br>
+
+      <!--  Liste annidate  -->
+        <ul>
+            <li>Elemento</li>
+            <li>Altra lista:
+                <ol>
+                    <li>Elemento Numerato</li>
+                    <li>Elemento Numerato</li>
+             </ol>
+            </li>
+        </ul>
+
+    <!-- Formattazione testo  -->
+    <p class="classe"> Usa lo stile tramite classe </p>
+
+    <p> Testo 
+            <strong>Grassetto</strong> 
+            <em>Enfasi</em> 
+            <i>Italic</i> 
+            <b>Bold</b> 
+            <u>Underline</u>
+    </p>
+
+    <!-- Link  -->
+     <a href="https://www.google.it" title="questo è un link">Link esempio</a>
+    <a href="https://www.google.it">
+        <img src="immagini/a.png"
+            width="300"                      
+            height="200">
+    </a>
+
+    <a href="altraPagina.html">Pagina interna</a>
+
+    <!-- Link interni (tornare su) -->
+    <a href="#Su">Torna su</a>
+
+    <!-- Menu -->
+     <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="altraPagina.html">Altra Pagina</a></li>
+      </ul>
+
+    <!-- Mandare mail -->
+    <a href="mailto:Email">Manda una mail</a>
+
+    <!-- Liste descrittive -->
+    <dl>
+        <dt>Soliloquio</dt>
+        <dd>Bla bla bla</dd>
+    </dl>
+
+    <!-- Blockquote, inline quotation e Citation -->
+    <blockquote cite="Link">
+        <p>Roba</p>
+    </blockquote>
+
+    <p id="Su" class="boxs"> Citazione in line <q cite="Link">Roba</q>
+        <cite>Tipo</cite>
+    </p>
+
+    <!-- Abbreviazioni -->
+    <abbr title="RobaRobaROba">R</abbr>
+
+    <!-- Informazioni di contatto -->
+    <address>
+        <p>
+            Fra<br>
+            Italia<br>
+            8321
+        </p>
+    </address>
+
+    <!-- Superscript e subscript -->
+    <p>
+        x<sup>2</sup><br>
+        c<sub>2</sub>
+    </p>
+
+    <!-- Rappresentare il codice -->
+    <pre><code> var p = document.querySelector('p')</code></pre>
+    <pre><samp> PING mozilla (63)</samp></pre>
+
+    <p>Premere <kbd>CTRL</kbd></p>
+
+    <!-- Tempo e date -->
+    <time datetime="2016-01-20">20 Gennaio 2016</time>
+
+    <!-- Div e Span -->
+     <div>
+        <p>Questo è un Div</p>
+     </div>
+
+     <span>
+        <p>Questo è uno Span</p>
+     </span>
+
+     <!-- HR -->
+     <p>testo testo testo.<hr>testo testo testo</p>
+
+     <!-- Figure e Figcaption -->
+    <figure>
+        <img src="immagini/a.png"   
+        alt="Una descrizione alternativa"
+        width="300"                      
+        height="200"                     
+        title="Testo al passaggio del mouse" 
+        loading="lazy"                  
+        style="border: 2px solid black;"  
+        id="immagine-principale"         
+        class="immagine-evidenziata"      
+        >
+        <figcaption>Questa è un'immagione</figcaption>
+    </figure>
+
+    <!-- Elemento video e audio -->
+     <video src="" controls width="600" height="300">
+        <p>Il tuo browser non supporta</p>
+     </video>
+
+     <video controls width="600" height="300">
+        <source src="" type="video/mp4">
+        <source src="" tyoe="video/webm">
+        <p>Il tuo browser non supporta</p>
+        <track kind="subtitles" src="" srclang="it">
+     </video>
+
+     <audio controls>
+        <source src="">
+        <source src="">
+        <p>Il tuo browser non supporta</p>
+     </audio>
+
+     <!-- Iframe -->
+      <iframe   width="640"
+                height="640"   
+                src="" 
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                allowfullscreen
+                sandbox>
+                <p>Il browser non supporta</p>
+      </iframe>
+
+    <!-- embedded e object -->
+    <embed src="" 
+            type="application/pdf" 
+            width="600" 
+            height="400">
+
+    <object data="" 
+            type="application/pdf" 
+            width="600" 
+            height="400">
+    <p>Se non riesci a vedere il PDF,
+         <a href="documento.pdf">clicca qui per scaricarlo</a>
+    </p>
+    </object>
+
+    <!-- SVG -->
+     <svg width="300" height="200">
+        <rect width="100%" height="100%" fill="green" />
+     </svg>
+
+     <img src="immagini/rett.svg"
+            alt="Immagine"
+            height="200"
+            width="300" />
+
+     <!-- Immagini responsive senza CSS -->
+    <picture>
+        <source media="(max-width:799px)" srcset="">
+        <source media="(min-width:800px)" srcset="">
+        <img src="" />
+    </picture>
+
+    <!-- Tabelle -->
+    <table>
+        <colgroup>
+            <col style="background-color: aqua;">
+        </colgroup>
+        <caption>Spese</caption>
+        <thead>
+            <tr>
+                <th>Data</td>
+                <th>Importo</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01/01</td>
+                <td>12 euro</td>
+            </tr>
+            <tr>
+                <td>02/01</td>
+                <td>15 euro</td>
+            </tr>
+            <tr>
+                <td colspan="2">03/01</td>
+                <td>17 euro</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td rowspan="2">04/01</td>
+                <td>19 euro</td>
+            </tr>
+            <tr>
+                <td>22 euro</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Form -->
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Campi</legend>
+            <!-- Testo semplice -->
+            <label>Nome: <input type="text" name="nome" required></label><br><br>
+
+            <!-- Password -->
+            <label>Password: <input type="password" name="password" required></label><br><br>
+
+            <!-- Email -->
+            <label>Email: <input type="email" name="email"></label><br><br>
+
+            <!-- Numero -->
+            <label>Età: <input type="number" name="eta" min="0" max="120"></label><br><br>
+
+            <!-- Data -->
+            <label>Data di nascita: <input type="date" name="data_nascita"></label><br><br>
+
+            <!-- Ora -->
+            <label>Orario: <input type="time" name="orario"></label><br><br>
+
+            <!-- Colore -->
+            <label>Colore preferito: <input type="color" name="colore"></label><br><br>
+
+            <!-- URL -->
+            <label>Sito web: <input type="url" name="sito"></label><br><br>
+
+            <!-- Telefono -->
+            <label>Telefono: <input type="tel" name="telefono"></label><br><br>
+        </fieldset><br><br>
+
+        <!-- Select -->
+        <label>Paese:
+        <select name="paese">
+            <option value="">Seleziona</option>
+            <option value="it">Italia</option>
+            <option value="fr">Francia</option>
+            <option value="de">Germania</option>
+        </select>
+        </label><br><br>
+
+        <!-- Textarea -->
+        <label>Commenti:<br>
+        <textarea name="commenti" rows="4" cols="40" placeholder="Scrivi qui..."></textarea>
+        </label><br><br>
+
+        <!-- Pulsanti -->
+        <input type="submit" value="Invia">
+        <input type="reset" value="Resetta">
+        <button type="button">Bottone</button><br><br>
+
+        <!-- Datalist -->
+        <input list="nomi">
+        <datalist id="nomi">
+            <option>Luca</option>
+            <option>Marco</option>
+            <option>Mario</option>
+        </datalist><br><br>
+
+        <!-- Range -->
+        <label>Soddisfazione: <input type="range" name="soddisfazione" min="0" max="10"></label><br><br>
+
+        <!-- Checkbox -->
+        <label><input type="checkbox" name="newsletter"> Iscriviti alla newsletter</label><br><br>
+
+        <!-- Radio button -->
+        Sesso:<br>
+        <label><input type="radio" name="sesso" value="maschio"> Maschio</label><br>
+        <label><input type="radio" name="sesso" value="femmina"> Femmina</label><br><br>
+
+        <!-- File -->
+        <label>Carica un file: <input type="file" name="file"></label><br><br>
+
+        <!-- Hidden -->
+        <input type="hidden" name="id_utente" value="12345">
+
+  </form>
+</div>
+
+<div class="desc">
+    <p>Parola descendant</p>
+</div>
+
+<div class="child">
+    <p>Parola child</p>
+</div>
+
+<h1>Titolo</h1>
+<p>Ciao</p>
+
+<!--  Display  -->
+      <ul id="ul">
+        <li>Elemento</li>
+        <li>Elemento</li>
+      </ul><br>
+
+<!--  overflow  -->
+    <p id="pi">Gestiamo overflow</p>
+
+<!--  object fit  -->
+    <img src="immagini/a.png" id="ob">
+
+    <!--  stile per le tabelle  -->
+    <table id="t">
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Band</th>
+      <th scope="col">Year formed</th>
+      <th scope="col">No. of Albums</th>
+      <th scope="col">Most famous song</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Buzzcocks</th>
+      <td>1976</td>
+      <td>9</td>
+      <td>Ever fallen in love (with someone you shouldn't've)</td>
+    </tr>
+    <tr>
+      <th scope="row">The Clash</th>
+      <td>1976</td>
+      <td>6</td>
+      <td>London Calling</td>
+    </tr>
+    <tr>
+      <th scope="row">The Damned</th>
+      <td>1976</td>
+      <td>10</td>
+      <td>Smash it up</td>
+    </tr>
+    <tr>
+      <th scope="row">Sex Pistols</th>
+      <td>1975</td>
+      <td>1</td>
+      <td>Anarchy in the UK</td>
+    </tr>
+    <tr>
+      <th scope="row">Sham 69</th>
+      <td>1976</td>
+      <td>13</td>
+      <td>If The Kids Are United</td>
+    </tr>
+    <tr>
+      <th scope="row">Siouxsie and the Banshees</th>
+      <td>1976</td>
+      <td>11</td>
+      <td>Hong Kong Garden</td>
+    </tr>
+    <tr>
+      <th scope="row">Stiff Little Fingers</th>
+      <td>1977</td>
+      <td>10</td>
+      <td>Suspect Device</td>
+    </tr>
+    <tr>
+      <th scope="row">The Stranglers</th>
+      <td>1974</td>
+      <td>17</td>
+      <td>No More Heroes</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Total albums</th>
+      <td colspan="2">77</td>
+    </tr>
+  </tfoot>
+</table>
+
+<!--  stile per il font e il testo  -->
+<h1 id="uno">Tommy the cat</h1>
+
+<p id="due">Well I remember it as though it were a meal ago…</p>
+
+<p id="tre">
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
+
+<!--  Flexbox  -->
+  <div class="flex">
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </div>
+
+  <!--  Grid  -->
+  <div class="grid">
+    <div class="box3"></div>
+    <div class="box4"></div>
+  </div>
+
+  <!--  Float  -->
+  <div class="float">
+    <p>Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.</p>
+  </div>
+
+  <!--  Positioning  -->
+    <div>
+        <p id="Pos">Testo</p>
+        <p id="Pes">Test2</p>
+        <p id="Pas">Testo3</p>
+    </div>
+    
+</body>
+</html>
